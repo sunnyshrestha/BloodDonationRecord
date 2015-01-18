@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/topimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@color/blood_red"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/proud_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:text="@string/proud"
+            android:textColor="@color/white"
+            android:textSize="@dimen/proud_text_size" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/enter_details"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/framelayout"
+        android:padding="8dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:text="@string/enter_details"
+        android:textColor="@color/blood_red"
+        android:textSize="22sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/pick_date"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/enter_details"
+        android:padding="4dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:text="@string/pick_date"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/pick_location"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/pick_date"
+        android:padding="4dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:text="@string/pick_location"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/pick_organisers"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_below="@id/pick_location"
+        android:padding="4dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:text="@string/pick_organisers"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:text="@string/pick_date"
+        android:layout_below="@+id/enter_details"
+        android:layout_toRightOf="@+id/pick_date"
+        android:layout_toEndOf="@+id/pick_date" />
+
+
+</RelativeLayout>
