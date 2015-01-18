@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Blood Donation Record</string>
+    <string name="proud">Proud to be a blood donor</string>
+    <string name="appeal">Donate Blood. Save Lives.</string>
+    <string name="action_settings">Settings</string>
+
+
+</resources>
