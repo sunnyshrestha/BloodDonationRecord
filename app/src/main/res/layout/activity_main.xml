@@ -3,7 +3,6 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:weightSum="1"
     tools:context=".MainActivity">
 
     <FrameLayout
@@ -23,10 +22,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
-            android:textSize="24sp"
+            android:textSize="@dimen/proud_text_size"
             android:text="@string/proud"
-            android:gravity="center_horizontal"
-            android:textColor="@color/white"/>
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:id="@+id/proud_text"/>
 
         </FrameLayout>
 

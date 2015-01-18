@@ -5,6 +5,11 @@
     <string name="proud">Proud to be a blood donor</string>
     <string name="appeal">Donate Blood. Save Lives.</string>
     <string name="action_settings">Settings</string>
-
+    <string name="enter_details">Enter blood donation details</string>
+    <string name="title_activity_get_donation_details">getDonationDetails</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="pick_date">Pick date</string>
+    <string name="pick_location">Location</string>
+    <string name="pick_organisers">Who are the organisers?</string>
 
 </resources>
