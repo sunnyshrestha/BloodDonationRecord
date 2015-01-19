@@ -18,12 +18,15 @@ public class CustomAdapter extends BaseAdapter {
     Integer[] image;
     private static LayoutInflater inflater=null;
 
+
+
     public CustomAdapter(MainActivity mainActivity, String[] itemname, Integer[] imageId) {
         title=itemname;
         context=mainActivity;
         image=imageId;
 
         inflater=(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
     }
 
     @Override

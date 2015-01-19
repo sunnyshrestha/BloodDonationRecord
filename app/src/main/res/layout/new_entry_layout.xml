@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:id="@+id/topRelative"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <FrameLayout
         android:id="@+id/framelayout"
@@ -32,61 +33,113 @@
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_below="@id/framelayout"
-        android:padding="8dp"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:padding="8dp"
         android:paddingStart="@dimen/activity_horizontal_margin"
         android:text="@string/enter_details"
         android:textColor="@color/blood_red"
-        android:textSize="22sp"
-        android:gravity="center"/>
+        android:textSize="@dimen/text_size" />
 
-    <TextView
+    <Button
         android:id="@+id/pick_date"
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/enter_details"
-        android:padding="4dp"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:onClick="setDate"
+        android:padding="8dp"
         android:paddingStart="@dimen/activity_horizontal_margin"
-        android:text="@string/pick_date"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:text="@string/pick_date" />
 
     <TextView
         android:id="@+id/pick_location"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_below="@id/pick_date"
-        android:padding="4dp"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:padding="4dp"
         android:paddingStart="@dimen/activity_horizontal_margin"
         android:text="@string/pick_location"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:textSize="@dimen/text_size" />
 
     <TextView
         android:id="@+id/pick_organisers"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
         android:layout_below="@id/pick_location"
-        android:padding="4dp"
         android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:padding="4dp"
         android:paddingStart="@dimen/activity_horizontal_margin"
         android:text="@string/pick_organisers"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:gravity="center"/>
+        android:textSize="@dimen/text_size" />
 
-    <Button
+    <EditText
+        android:id="@+id/button_pick_date"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/pick_location"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="28dp"
+        android:layout_toEndOf="@+id/pick_date"
+        android:layout_toRightOf="@+id/pick_date"
+        android:padding="4dp" />
+
+    <EditText
+        android:id="@+id/et_location"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button_pick_date"
+        android:layout_alignStart="@+id/button_pick_date"
+        android:layout_below="@+id/button_pick_date" />
+
+    <EditText
+        android:id="@+id/et_organisers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pick_organisers"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:padding="8dp" />
+
+    <Switch
+        android:id="@+id/reminderswitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="4dp"
-        android:text="@string/pick_date"
-        android:layout_below="@+id/enter_details"
-        android:layout_toRightOf="@+id/pick_date"
-        android:layout_toEndOf="@+id/pick_date" />
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/et_organisers"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="8dp"
+        android:padding="4dp" />
 
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/et_organisers"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_toLeftOf="@id/reminderswitch"
+        android:padding="8dp"
+        android:text="@string/reminder_switch"
+        android:textSize="@dimen/text_size"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/message"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:text="@string/save" />
 
 </RelativeLayout>

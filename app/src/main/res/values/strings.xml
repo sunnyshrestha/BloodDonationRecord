@@ -10,6 +10,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="pick_date">Pick date</string>
     <string name="pick_location">Location</string>
-    <string name="pick_organisers">Who are the organisers?</string>
+    <string name="pick_organisers">Who were the organisers?</string>
+    <string name="reminder_switch">Remind me when I\'m eligible to donate again</string>
+    <string name="save">Save</string>
+    <string name="warning">Please fill all the fields</string>
 
 </resources>

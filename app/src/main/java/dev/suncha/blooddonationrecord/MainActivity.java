@@ -11,7 +11,6 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
@@ -20,6 +19,7 @@ public class MainActivity extends Activity {
     Context context;
     ImageView topimageview;
     TextView proud_tv;
+    ;
 
     String[] itemname ={
             "Add new entry",
@@ -39,6 +39,7 @@ public class MainActivity extends Activity {
         context=this;
         lv=(ListView) findViewById(R.id.listView);
         lv.setAdapter(new CustomAdapter(this, itemname,imageId));
+
 
         Display display = getWindowManager().getDefaultDisplay();
         Point size = new Point();
