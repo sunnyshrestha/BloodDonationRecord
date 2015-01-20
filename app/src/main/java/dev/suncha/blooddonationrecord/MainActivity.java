@@ -53,6 +53,7 @@ public class MainActivity extends Activity {
         proud_tv.getLayoutParams().height=height/4;
 
         final Intent donationDetails=new Intent(this,getDonationDetails.class);
+        final Intent viewpreviousrecord=new Intent(this,ViewPreviousRecords.class);
 
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -63,8 +64,11 @@ public class MainActivity extends Activity {
                     case 0:
                         startActivity(donationDetails);
                         break;
-
-
+                    case 1:
+                        startActivity(viewpreviousrecord);
+                        break;
+                    default:
+                        break;
                 }
             }
         });

@@ -98,8 +98,8 @@ public class getDonationDetails extends ActionBarActivity {
     }
 
     private void showDate(int year, int month, int day) {
-        display_date.setText(new StringBuilder().append(day).append("/")
-                .append(month).append("/").append(year));
+        display_date.setText(new StringBuilder().append(day).append("-")
+                .append(month).append("-").append(year));
     }
 
     @SuppressWarnings("deprecation")

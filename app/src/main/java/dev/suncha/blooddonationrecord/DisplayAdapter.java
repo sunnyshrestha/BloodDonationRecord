@@ -50,13 +50,13 @@ public class DisplayAdapter extends BaseAdapter {
         LayoutInflater layoutInflater;
         if (convertView == null) {
             layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = layoutInflater.inflate(R.layout.view_previous_records, null);
+            convertView = layoutInflater.inflate(R.layout.listcell, null);
             mHolder = new ListViewHolder();
-            mHolder.tv_id = (TextView) convertView.findViewById(R.id.txt_id);
-            mHolder.tv_date = (TextView) convertView.findViewById(R.id.txt_date);
-            mHolder.tv_location = (TextView) convertView.findViewById(R.id.txt_location);
-            mHolder.tv_organisers = (TextView) convertView.findViewById(R.id.txt_organisers);
-            mHolder.tv_reminder = (TextView) convertView.findViewById(R.id.txt_reminder);
+            mHolder.tv_id = (TextView) convertView.findViewById(R.id.tv_id);
+            mHolder.tv_date = (TextView) convertView.findViewById(R.id.tv_date);
+            mHolder.tv_location = (TextView) convertView.findViewById(R.id.tv_location);
+            mHolder.tv_organisers = (TextView) convertView.findViewById(R.id.tv_organisers);
+            mHolder.tv_reminder = (TextView) convertView.findViewById(R.id.tv_reminder);
             convertView.setTag(mHolder);
         } else {
             mHolder = (ListViewHolder) convertView.getTag();
@@ -76,6 +76,5 @@ public class DisplayAdapter extends BaseAdapter {
         TextView tv_location;
         TextView tv_organisers;
         TextView tv_reminder;
-
     }
 }

@@ -1,43 +1,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F3CAE5"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:padding="8dp" >
+    android:padding="8dp">
 
     <TextView
-        android:id="@+id/txt_id"
+        android:id="@+id/tv_id"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textColor="#000" />
 
     <TextView
-        android:id="@+id/txt_date"
+        android:id="@+id/tv_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:textColor="#000" />
 
     <TextView
-        android:id="@+id/txt_location"
+        android:id="@+id/tv_location"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:textColor="#000" />
+
     <TextView
-        android:id="@+id/txt_organisers"
+        android:id="@+id/tv_organisers"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:textColor="#000" />
+
     <TextView
-        android:id="@+id/txt_reminder"
+        android:id="@+id/tv_reminder"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
+        android:layout_weight="2"
         android:textColor="#000" />
 
 </LinearLayout>
