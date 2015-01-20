@@ -20,6 +20,10 @@
             android:name=".getDonationDetails"
             android:label="@string/title_activity_get_donation_details" >
         </activity>
+        <activity
+            android:name=".ViewPreviousRecords"
+            android:label="@string/title_activity_view_previous_records" >
+        </activity>
     </application>
 
 </manifest>

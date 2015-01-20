@@ -14,5 +14,6 @@
     <string name="reminder_switch">Remind me when I\'m eligible to donate again</string>
     <string name="save">Save</string>
     <string name="warning">Please fill all the fields</string>
+    <string name="title_activity_view_previous_records">ViewPreviousRecords</string>
 
 </resources>
