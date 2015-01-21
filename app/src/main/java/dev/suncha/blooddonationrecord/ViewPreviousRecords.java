@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -22,7 +23,7 @@ public class ViewPreviousRecords extends ActionBarActivity {
     private ArrayList<String> _organisers=new ArrayList<String>();
 
     private ListView donationList;
-
+    TextView tv_id,tv_date,tv_location,tv_reminder,tv_organisers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,6 @@ public class ViewPreviousRecords extends ActionBarActivity {
     private void displayData() {
         dataBase=mHelper.getWritableDatabase();
         Cursor mCursor=dataBase.rawQuery("SELECT*FROM "+DatabaseHandler.TABLE_DONATIONS,null);
-
         _id.clear();
         _date.clear();
         _location.clear();
@@ -47,6 +47,7 @@ public class ViewPreviousRecords extends ActionBarActivity {
         if(mCursor.moveToFirst()){
             do{
                 _id.add(mCursor.getString(mCursor.getColumnIndex(DatabaseHandler.KEY_ID)));
+                _date.add(mCursor.getString(mCursor.getColumnIndex(DatabaseHandler.KEY_DATE)));
                 _location.add(mCursor.getString(mCursor.getColumnIndex(DatabaseHandler.KEY_LOCATION)));
                 _organisers.add(mCursor.getString(mCursor.getColumnIndex(DatabaseHandler.KEY_ORGANISERS)));
                 _reminder.add(mCursor.getString(mCursor.getColumnIndex(DatabaseHandler.KEY_REMINDER)));
@@ -55,9 +56,7 @@ public class ViewPreviousRecords extends ActionBarActivity {
         DisplayAdapter displayAdapter=new DisplayAdapter(ViewPreviousRecords.this,_id,_date,_location,_organisers,_reminder);
         donationList.setAdapter(displayAdapter);
         mCursor.close();
-
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -77,7 +76,6 @@ public class ViewPreviousRecords extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }

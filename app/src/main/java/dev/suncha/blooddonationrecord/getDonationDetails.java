@@ -17,12 +17,10 @@ import android.widget.ImageView;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.Calendar;
 
 
 public class getDonationDetails extends ActionBarActivity {
-
 
     private DatePicker datePicker;
     private Calendar calendar;
@@ -31,7 +29,7 @@ public class getDonationDetails extends ActionBarActivity {
     TextView proud_tv;
     Button pick_date,saveButton;
     Switch reminderswitch;
-    String reminder="";
+    String reminder= "No";
 
     EditText display_date,display_location,display_organisers;
 
@@ -74,9 +72,9 @@ public class getDonationDetails extends ActionBarActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked){
-                    reminder="yes";
+                    reminder="Yes";
                 }else{
-                    reminder="no";
+                    reminder="No";
                 }
             }
         });
@@ -90,7 +88,8 @@ public class getDonationDetails extends ActionBarActivity {
                     Toast.makeText(getApplicationContext(),R.string.warning,Toast.LENGTH_SHORT).show();
                 }else{
                     db.addRecord(new donationRecord(display_date.getText().toString(),display_location.getText().toString(),display_organisers.getText().toString(),reminder));
-
+                    Toast.makeText(getApplication(),R.string.confirmation,Toast.LENGTH_SHORT).show();
+                    finish();
                 }
             }
         });
@@ -98,15 +97,15 @@ public class getDonationDetails extends ActionBarActivity {
     }
 
     private void showDate(int year, int month, int day) {
-        display_date.setText(new StringBuilder().append(day).append("-")
-                .append(month).append("-").append(year));
+        display_date.setText(new StringBuilder().append(day).append("/")
+                .append(month).append("/").append(year));
     }
 
     @SuppressWarnings("deprecation")
     public void setDate(View view) {
         showDialog(999);
-        Toast.makeText(getApplicationContext(), "ca", Toast.LENGTH_SHORT)
-                .show();
+//        Toast.makeText(getApplicationContext(), "ca", Toast.LENGTH_SHORT)
+//                .show();
     }
 
 

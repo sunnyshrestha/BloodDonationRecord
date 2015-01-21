@@ -46,8 +46,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(KEY_DATE, donation.get_date());
-        values.put(KEY_LOCATION, donation.get_organisers());
+        values.put(KEY_LOCATION, donation.get_location());
         values.put(KEY_REMINDER, donation.get_reminder());
+        values.put(KEY_ORGANISERS,donation.get_organisers());
 
         db.insert(TABLE_DONATIONS, null, values);
         db.close();

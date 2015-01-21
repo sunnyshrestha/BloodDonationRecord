@@ -1,9 +1,12 @@
 package dev.suncha.blooddonationrecord;
 
 import android.content.Context;
+import android.graphics.Point;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
@@ -48,15 +51,32 @@ public class DisplayAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         ListViewHolder mHolder;
         LayoutInflater layoutInflater;
+
         if (convertView == null) {
             layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
             convertView = layoutInflater.inflate(R.layout.listcell, null);
             mHolder = new ListViewHolder();
+
+            WindowManager wm=(WindowManager)mContext.getSystemService(Context.WINDOW_SERVICE);
+            Display display = wm.getDefaultDisplay();
+            Point size = new Point();
+            display.getSize(size);
+            int width = size.x;
+
             mHolder.tv_id = (TextView) convertView.findViewById(R.id.tv_id);
             mHolder.tv_date = (TextView) convertView.findViewById(R.id.tv_date);
             mHolder.tv_location = (TextView) convertView.findViewById(R.id.tv_location);
             mHolder.tv_organisers = (TextView) convertView.findViewById(R.id.tv_organisers);
             mHolder.tv_reminder = (TextView) convertView.findViewById(R.id.tv_reminder);
+
+            mHolder.tv_id.getLayoutParams().width=width/10;
+            mHolder.tv_reminder.getLayoutParams().width=width/10;
+            mHolder.tv_organisers.getLayoutParams().width=width/4;
+            mHolder.tv_location.getLayoutParams().width=width/4;
+            mHolder.tv_date.getLayoutParams().width=width/4;
+            mHolder.tv_id.getLayoutParams().width=width/10;
+
             convertView.setTag(mHolder);
         } else {
             mHolder = (ListViewHolder) convertView.getTag();
