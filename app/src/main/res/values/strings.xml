@@ -16,6 +16,12 @@
     <string name="warning">Please fill all the fields</string>
     <string name="title_activity_view_previous_records">ViewPreviousRecords</string>
     <string name="confirmation">New record added</string>
+    <string name="serial">Donation no.</string>
+    <string name="date">Date: </string>
+    <string name="location">Location: </string>
+    <string name="organisers">Organisers: </string>
+    <string name="reminder">Reminder set: </string>
+
 
 
 </resources>

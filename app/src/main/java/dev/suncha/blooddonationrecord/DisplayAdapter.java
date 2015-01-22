@@ -81,6 +81,8 @@ public class DisplayAdapter extends BaseAdapter {
         } else {
             mHolder = (ListViewHolder) convertView.getTag();
         }
+
+
         mHolder.tv_id.setText(_id.get(position));
         mHolder.tv_date.setText(_date.get(position));
         mHolder.tv_location.setText(_location.get(position));

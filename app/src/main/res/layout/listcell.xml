@@ -1,58 +1,117 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_alignParentLeft="true"
     android:layout_marginLeft="@dimen/activity_horizontal_margin"
     android:layout_marginRight="@dimen/activity_horizontal_margin"
     android:background="#F3CAE5"
     android:gravity="center_vertical"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:padding="8dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
->
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="4dp">
 
-        <TextView
-            android:id="@+id/tv_id"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:textColor="#000"
-            android:gravity="center_vertical"/>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/tv_date"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:textColor="#000"
-            android:gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/serial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="@string/serial"
+                android:textSize="@dimen/proud_text_size" />
 
-        <TextView
-            android:id="@+id/tv_location"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:textColor="#000"
-            android:gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/serial"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="@string/date" />
 
-        <TextView
-            android:id="@+id/tv_organisers"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:textColor="#000"
-            android:gravity="center_vertical"/>
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="@string/location" />
 
-        <TextView
-            android:id="@+id/tv_reminder"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:textColor="#000"
-            android:gravity="center_vertical"/>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/oraganiserstv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/location"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="@string/organisers" />
+
+            <TextView
+                android:id="@+id/reminder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/oraganiserstv"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:text="@string/reminder" />
+
+
+            <TextView
+                android:id="@+id/tv_id"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_toRightOf="@id/serial"
+                android:textColor="#000"
+                android:textSize="@dimen/proud_text_size" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_id"
+                android:layout_gravity="center"
+                android:layout_marginLeft="125dp"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_date"
+                android:layout_gravity="center"
+                android:layout_marginLeft="125dp"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/tv_organisers"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_location"
+                android:layout_gravity="center"
+                android:layout_marginLeft="125dp"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/tv_reminder"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_organisers"
+                android:layout_gravity="center"
+                android:layout_marginLeft="125dp"
+                android:textColor="#000" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 
 
 </ScrollView>
