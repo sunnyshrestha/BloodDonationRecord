@@ -55,7 +55,7 @@ public class DisplayAdapter extends BaseAdapter {
         if (convertView == null) {
             layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            convertView = layoutInflater.inflate(R.layout.listcell, null);
+            convertView = layoutInflater.inflate(R.layout.card_view, null);
             mHolder = new ListViewHolder();
 
             WindowManager wm=(WindowManager)mContext.getSystemService(Context.WINDOW_SERVICE);
